@@ -25,14 +25,15 @@
       function moveDodgerRight() {
         var left = parseInt(leftNumbers, 10)
         var leftNumbers = dodger.style.left.replace('px', '')
-
+  
         if (left > 0) {
+                  console.log(e.which)
+
           dodger.style.left = `${left + 1}px`
         }
       }
 
       document.addEventListener('keydown', function(e) {
-        console.log(e.which)
 
         if (e.which === 37) {
           moveDodgerLeft()
